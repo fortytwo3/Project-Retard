@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0b0d13;
+  --color-surface: #141824;
+  --color-surface-2: #1d2231;
+  --color-line: #2a3145;
+  --color-muted: #8a93ab;
+  --color-accent: #ffcb05; /* Pokémon logo yellow */
+  --color-accent-deep: #3b6cb8; /* Pokémon logo blue */
+  --color-good: #4ade80;
+  --color-bad: #f87171;
+}
+
+html {
+  color-scheme: dark;
+  /* Stop iOS from zooming when the manual-search input takes focus. */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-ink);
+  color: #eef1f8;
+  /* Keep content clear of the home indicator on iPhone. */
+  padding-bottom: env(safe-area-inset-bottom);
+  overscroll-behavior-y: none;
+}
+
+@layer components {
+  .card-surface {
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: 1rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    padding: 0.75rem 1.25rem;
+    transition: opacity 0.15s ease;
+    /* Every tap target clears the 44px accessibility floor. */
+    min-height: 2.75rem;
+  }
+
+  .btn:active {
+    opacity: 0.75;
+  }
+
+  .btn-primary {
+    background: var(--color-accent);
+    color: #1a1a1a;
+  }
+
+  .btn-secondary {
+    background: var(--color-surface-2);
+    color: #eef1f8;
+    border: 1px solid var(--color-line);
+  }
+
+  .btn:disabled {
+    opacity: 0.45;
+    pointer-events: none;
+  }
+}
+
+/* Indeterminate progress sweep used while OCR and price fetches run. */
+@keyframes sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+.animate-sweep {
+  animation: sweep 1.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-sweep {
+    animation: none;
+  }
+}

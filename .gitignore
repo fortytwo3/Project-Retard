@@ -1,0 +1,21 @@
+node_modules/
+.next/
+out/
+build/
+dist/
+
+# local env + secrets
+.env
+.env.local
+.env*.local
+
+# provider response cache (see src/lib/cache.ts)
+.cache/
+
+*.tsbuildinfo
+next-env.d.ts
+
+.DS_Store
+*.log
+npm-debug.log*
+coverage/
