@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Magnifier over a Poké Ball silhouette. Drawn inside the adaptive-icon
+     safe zone (the middle 66dp of 108dp) so no launcher mask clips it. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <path
+        android:strokeColor="#FFCB05"
+        android:strokeWidth="5"
+        android:fillColor="#00000000"
+        android:pathData="M54,54m-22,0a22,22 0,1 1,44 0a22,22 0,1 1,-44 0" />
+
+    <path
+        android:strokeColor="#FFCB05"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:pathData="M32,54 L76,54" />
+
+    <path
+        android:strokeColor="#FFCB05"
+        android:strokeWidth="5"
+        android:fillColor="#0B0D13"
+        android:pathData="M54,54m-7,0a7,7 0,1 1,14 0a7,7 0,1 1,-14 0" />
+
+    <path
+        android:strokeColor="#3B6CB8"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:pathData="M70,70 L82,82" />
+</vector>
